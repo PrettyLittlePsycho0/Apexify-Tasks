@@ -1,0 +1,298 @@
+{
+	"info": {
+		"_postman_id": "8a6d356d-b4a7-4f82-99d8-9c64bd9191bb",
+		"name": "Users",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47271939",
+		"_collection_link": "https://talalmughal996-8396838.postman.co/workspace/Job-Board-Platform-Testing~810ee94b-0d11-409d-8bc9-338cb3305559/collection/47271939-8a6d356d-b4a7-4f82-99d8-9c64bd9191bb?action=share&source=collection_link&creator=47271939"
+	},
+	"item": [
+		{
+			"name": "Register Employer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"role\": \"Employer\",\r\n  \"name\": \"Gurl Smith\",\r\n  \"email\": \"gurl@company.com\",\r\n  \"password\": \"secret\",\r\n  \"companyName\": \"Teewrwech Corp\",\r\n  \"description\": \"ewer\",\r\n  \"website\": \"www.pornhub.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:6969/api/auth/register",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "6969",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register Candidate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"role\": \"Candidate\",\r\n    \"name\": \"Ali\",\r\n    \"email\": \"alikhan69@gmail.com\",\r\n    \"password\": \"secret\",\r\n    \"bio\": \"bleh\",\r\n    \"skills\": \"sadasdas\",\r\n    \"experience\": \"sdafsd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:6969/api/auth/register",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "6969",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"bro@company.com\",\r\n    \"password\": \"secret\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:6969/api/auth/login",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "6969",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteUser",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YTRjMGI4N2ZlNzdkMzA2ZDNkZTQ2ZCIsImlhdCI6MTc1NTYzNjAzNSwiZXhwIjoxNzU4MjI4MDM1fQ.7RkuRlG_ifQCV3FD6bnFP4QXH8FhY1_dh33tAHf6Sa8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"gurl@company.com\",\r\n    \"password\": \"secret\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:6969/api/auth/delete",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "6969",
+					"path": [
+						"api",
+						"auth",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Employer Profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YTA0Y2VlNjQzM2M2MDViYzYwZDg0ZCIsImlhdCI6MTc1NTYyMDk1NCwiZXhwIjoxNzU4MjEyOTU0fQ.Gz7HXvMPGApthVKyjb7jKDiiXVEZQ3H0WrhrfaatAkI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:6969/api/employer/profile",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "6969",
+					"path": [
+						"api",
+						"employer",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Employer Profile Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"companyName\": \"\",\r\n    \"website\": \"\",\r\n    \"description\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:6969/api/employer/update",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "6969",
+					"path": [
+						"api",
+						"employer",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Candidate Profile Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YTRjMDJlN2ZlNzdkMzA2ZDNkZTQ1ZiIsImlhdCI6MTc1NTcxMDE1OCwiZXhwIjoxNzU4MzAyMTU4fQ.fS3JDzIURqOmwdywkIdeDJxgGwmUkTwmMIyhTu4KfLE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bio\": \"fuck expert\",\r\n    \"skills\": [\"fucking\"],\r\n    \"overrideSkills\": false,\r\n    \"experience\": \"420 seconds\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:6969/api/candidates/update",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "6969",
+					"path": [
+						"api",
+						"candidates",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Candidate Profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YTJmYjY0MjNmNjZlNWM2ODU2YzUyOCIsImlhdCI6MTc1NTYyMTM2NCwiZXhwIjoxNzU4MjEzMzY0fQ.A_X0ClSfo96-HDfN8kHqU48M0ggEFAoDNMEGJ8Yy-WA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "127.0.0.1:6969/api/candidates/profile",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "6969",
+					"path": [
+						"api",
+						"candidates",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

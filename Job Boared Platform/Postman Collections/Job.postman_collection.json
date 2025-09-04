@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "e810e3c3-c19f-4312-9712-bcd98b562c48",
+		"name": "Job",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47271939",
+		"_collection_link": "https://talalmughal996-8396838.postman.co/workspace/Job-Board-Platform-Testing~810ee94b-0d11-409d-8bc9-338cb3305559/collection/47271939-e810e3c3-c19f-4312-9712-bcd98b562c48?action=share&source=collection_link&creator=47271939"
+	},
+	"item": [
+		{
+			"name": "Post Jobs",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YTRiZmY1N2ZlNzdkMzA2ZDNkZTQ1YyIsImlhdCI6MTc1NjAwNjk1NCwiZXhwIjoxNzU4NTk4OTU0fQ.Avo_ZNjziQ_3_b6PwXnpQDAFTyo7sK0jZ541mXBky8I",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Backend\",\r\n  \"description\": \"Looking for a Backend expert\",\r\n  \"location\": \"Onsite\",\r\n  \"salary\": 60000\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:6969/api/employer/post",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "6969",
+					"path": [
+						"api",
+						"employer",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete Job",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YTRiZmY1N2ZlNzdkMzA2ZDNkZTQ1YyIsImlhdCI6MTc1NTY4MDg0MCwiZXhwIjoxNzU4MjcyODQwfQ.tXyylran3q9CNtr7UfQKlUvS_mx8pnEykaBh3lnG214",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:6969/api/employer/job/delete/68a59061f224fda8beb963e1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "6969",
+					"path": [
+						"api",
+						"employer",
+						"job",
+						"delete",
+						"68a59061f224fda8beb963e1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Job",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YTRiZmY1N2ZlNzdkMzA2ZDNkZTQ1YyIsImlhdCI6MTc1NTY4MDg0MCwiZXhwIjoxNzU4MjcyODQwfQ.tXyylran3q9CNtr7UfQKlUvS_mx8pnEykaBh3lnG214",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"location\": \"Remote\",\r\n    \"salary\": 100000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:6969/api/employer/job/update/68a59704ff8cbfc89ed8c8e7",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "6969",
+					"path": [
+						"api",
+						"employer",
+						"job",
+						"update",
+						"68a59704ff8cbfc89ed8c8e7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Jobs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:6969/api/candidates/jobs/search",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "6969",
+					"path": [
+						"api",
+						"candidates",
+						"jobs",
+						"search"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

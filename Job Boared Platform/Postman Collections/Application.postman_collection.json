@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "a4a309e7-5788-4b04-883e-b4270276ab4c",
+		"name": "Application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47271939",
+		"_collection_link": "https://talalmughal996-8396838.postman.co/workspace/Job-Board-Platform-Testing~810ee94b-0d11-409d-8bc9-338cb3305559/collection/47271939-a4a309e7-5788-4b04-883e-b4270276ab4c?action=share&source=collection_link&creator=47271939"
+	},
+	"item": [
+		{
+			"name": "Apply To Job",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YTRjMDJlN2ZlNzdkMzA2ZDNkZTQ1ZiIsImlhdCI6MTc1NjAwNjgzMiwiZXhwIjoxNzU4NTk4ODMyfQ.lyZQOpm7kX2B2hBNokiTh9jUR0JQXhOifZR3-PSMW9o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:6969/api/application/apply/68aa905ef3b295801f052a48",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "6969",
+					"path": [
+						"api",
+						"application",
+						"apply",
+						"68aa905ef3b295801f052a48"
+					],
+					"query": [
+						{
+							"key": "jobId",
+							"value": "68a0386ba2e9fb89ab651566",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Applications by Job ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YTRiZmY1N2ZlNzdkMzA2ZDNkZTQ1YyIsImlhdCI6MTc1NjAwNjk1NCwiZXhwIjoxNzU4NTk4OTU0fQ.Avo_ZNjziQ_3_b6PwXnpQDAFTyo7sK0jZ541mXBky8I",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "127.0.0.1:6969/api/employer/apps/68a59704ff8cbfc89ed8c8e7",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "6969",
+					"path": [
+						"api",
+						"employer",
+						"apps",
+						"68a59704ff8cbfc89ed8c8e7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Application Status",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YTRiZmY1N2ZlNzdkMzA2ZDNkZTQ1YyIsImlhdCI6MTc1NjAwNjk1NCwiZXhwIjoxNzU4NTk4OTU0fQ.Avo_ZNjziQ_3_b6PwXnpQDAFTyo7sK0jZ541mXBky8I",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\": \"rejected\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:6969/api/employer/application/update/68aa9096f3b295801f052a50",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "6969",
+					"path": [
+						"api",
+						"employer",
+						"application",
+						"update",
+						"68aa9096f3b295801f052a50"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Candidate Applications",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YTRjMDJlN2ZlNzdkMzA2ZDNkZTQ1ZiIsImlhdCI6MTc1NjAwNjgzMiwiZXhwIjoxNzU4NTk4ODMyfQ.lyZQOpm7kX2B2hBNokiTh9jUR0JQXhOifZR3-PSMW9o",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:6969/api/candidates/myapps",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "6969",
+					"path": [
+						"api",
+						"candidates",
+						"myapps"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Employer Applications to a Job",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
